@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos y título de la página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALE — Espejos Encantados | Catálogo de Espejos</title>
+  <meta name="description" content="Catálogo de espejos con estilo oscuro y gótico. Elige tu espejo y pídelo directo por WhatsApp.">
+
+  <!-- Tipografía: Cinzel para títulos, Manrope para texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ========== CABECERA: logo + navegación ========== -->
+  <header class="cabecera-sitio">
+    <nav class="navegacion-principal contenedor" aria-label="Navegación principal">
+
+      <!-- Logo / Nombre de la tienda -->
+      <a href="#inicio" class="logo-tienda">ALE <span class="logo-respaldo">— Espejos Encantados</span></a>
+
+      <!-- Botón hamburguesa (visible solo en móvil) -->
+      <button id="boton-menu" class="boton-hamburguesa" type="button" aria-controls="lista-menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="linea-hamburguesa"></span>
+        <span class="linea-hamburguesa"></span>
+        <span class="linea-hamburguesa"></span>
+      </button>
+
+      <!-- Lista de enlaces de la navegación -->
+      <ul id="lista-menu" class="lista-menu">
+        <li><a class="enlace-navegacion" href="#inicio">Inicio</a></li>
+        <li><a class="enlace-navegacion" href="#catalogo">Catálogo</a></li>
+        <li><a class="enlace-navegacion" href="#como-comprar">Cómo comprar</a></li>
+        <li><a class="enlace-navegacion" href="#contacto">Contacto</a></li>
+        <li><a class="boton-whatsapp boton-nav" href="https://wa.me/56957071102?text=Hola%2C%20me%20interesa%20un%20espejo%20del%20cat%C3%A1logo." target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO: portada con espejo grande ========== -->
+    <section id="inicio" class="seccion-hero">
+      <div class="contenedor contenedor-hero">
+        <div class="contenido-hero">
+          <h1 class="titulo-hero">Espejos que te miran de vuelta</h1>
+          <p class="subtitulo-hero">
+            Espejos antiguos con un alma oscura. Marcos tallados, vidrios con historia
+            y presencia gótica para tu casa. Elige el tuyo y pídelo por WhatsApp.
+          </p>
+          <div class="acciones-hero">
+            <a href="#catalogo" class="boton-principal">Ver catálogo</a>
+            <a href="#contacto" class="boton-secundario">Contactar</a>
+          </div>
+          <p class="nota-hero">Precios en pesos chilenos (CLP). Envíos según comuna.</p>
+        </div>
+
+        <div class="marco-espejo-hero">
+          <!-- Imagen principal del hero: coloca tu foto en img/espejo-hero.jpg -->
+          <img class="espejo-hero-imagen" src="img/espejo-hero.jpg" alt="Espejo antiguo de marco tallado oscuro">
+          <p class="pie-espejo-hero">Espejo Catedral — pieza destacada</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CATÁLOGO: tarjetas de espejos ========== -->
+    <section id="catalogo" class="seccion-catalogo">
+      <div class="contenedor">
+
+        <h2 class="titulo-seccion">Catálogo de espejos</h2>
+        <p class="descripcion-seccion">
+          Cada espejo es único, con su propio marco y su propio desgaste del tiempo.
+          Toca "Quiero este espejo" y te abrimos WhatsApp con el mensaje listo.
+        </p>
+
+        <div class="rejilla-catalogo">
+
+          <!-- Tarjeta 1 -->
+          <article class="tarjeta-espejo">
+            <figure class="contenedor-imagen">
+              <img class="imagen-espejo" src="img/espejo-1.jpg" alt="Espejo Filo, marco tallado rectangular">
+              <span class="etiqueta-espejo">Disponible</span>
+            </figure>
+            <h3 class="nombre-espejo">Espejo Filo</h3>
+            <p class="medida-espejo">60 x 80 cm</p>
+            <p class="descripcion-espejo">Marco tallado oscuro, vidrio rectangular con leve pátina antigua. Peso y presencia.</p>
+            <p class="precio-espejo">$89.990 <span class="moneda">CLP</span></p>
+            <button class="boton-whatsapp" type="button" data-nombre="Espejo Filo (60x80 cm)" data-precio="$89.990 CLP">Quiero este espejo</button>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="tarjeta-espejo">
+            <figure class="contenedor-imagen">
+              <img class="imagen-espejo" src="img/espejo-2.jpg" alt="Espejo Krueger, ovalado oscuro">
+              <span class="etiqueta-espejo">Disponible</span>
+            </figure>
+            <h3 class="nombre-espejo">Espejo Krueger</h3>
+            <p class="medida-espejo">Ovalado 55 x 75 cm</p>
+            <p class="descripcion-espejo">Forma ovalada de líneas marcadas, marco en tonos verdes y rojos. Inquietante de cerca.</p>
+            <p class="precio-espejo">$74.990 <span class="moneda">CLP</span></p>
+            <button class="boton-whatsapp" type="button" data-nombre="Espejo Krueger (Ovalado 55x75 cm)" data-precio="$74.990 CLP">Quiero este espejo</button>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="tarjeta-espejo">
+            <figure class="contenedor-imagen">
+              <img class="imagen-espejo" src="img/espejo-3.jpg" alt="Espejo Muñeco, espejo pequeño estilo antiguo">
+              <span class="etiqueta-espejo">Último</span>
+            </figure>
+            <h3 class="nombre-espejo">Espejo Muñeco</h3>
+            <p class="medida-espejo">50 x 70 cm</p>
+            <p class="descripcion-espejo">Tamaño íntimo, marco envejecido estilo muñeca antigua. Ideal para pieza pequeña.</p>
+            <p class="precio-espejo">$64.990 <span class="moneda">CLP</span></p>
+            <button class="boton-whatsapp" type="button" data-nombre="Espejo Muñeco (50x70 cm)" data-precio="$64.990 CLP">Quiero este espejo</button>
+          </article>
+
+          <!-- Tarjeta 4 -->
+          <article class="tarjeta-espejo">
+            <figure class="contenedor-imagen">
+              <img class="imagen-espejo" src="img/espejo-4.jpg" alt="Espejo Niebla, espejo grande de pie">
+              <span class="etiqueta-espejo">Nuevo</span>
+            </figure>
+            <h3 class="nombre-espejo">Espejo Niebla</h3>
+            <p class="medida-espejo">70 x 100 cm</p>
+            <p class="descripcion-espejo">Gran formato, vidrio con bruma en los bordes. Llena una pared entera con oscuridad.</p>
+            <p class="precio-espejo">$99.990 <span class="moneda">CLP</span></p>
+            <button class="boton-whatsapp" type="button" data-nombre="Espejo Niebla (70x100 cm)" data-precio="$99.990 CLP">Quiero este espejo</button>
+          </article>
+
+          <!-- Tarjeta 5 -->
+          <article class="tarjeta-espejo">
+            <figure class="contenedor-imagen">
+              <img class="imagen-espejo" src="img/espejo-5.jpg" alt="Espejo Catedral, espejo con arco superior">
+              <span class="etiqueta-espejo">Destacado</span>
+            </figure>
+            <h3 class="nombre-espejo">Espejo Catedral</h3>
+            <p class="medida-espejo">65 x 95 cm</p>
+            <p class="descripcion-espejo">Arco superior tipo catedral, marco tallado profundo. El de la foto principal del hero.</p>
+            <p class="precio-espejo">$119.990 <span class="moneda">CLP</span></p>
+            <button class="boton-whatsapp" type="button" data-nombre="Espejo Catedral (65x95 cm)" data-precio="$119.990 CLP">Quiero este espejo</button>
+          </article>
+
+          <!-- Tarjeta 6 -->
+          <article class="tarjeta-espejo">
+            <figure class="contenedor-imagen">
+              <img class="imagen-espejo" src="img/espejo-6.jpg" alt="Espejo Susurro, espejo redondo pequeño">
+              <span class="etiqueta-espejo">Disponible</span>
+            </figure>
+            <h3 class="nombre-espejo">Espejo Susurro</h3>
+            <p class="medida-espejo">Redondo 45 cm Ø</p>
+            <p class="descripcion-espejo">Redondo y silencioso, marco fino oscuro. El más sobrio del catálogo.</p>
+            <p class="precio-espejo">$59.990 <span class="moneda">CLP</span></p>
+            <button class="boton-whatsapp" type="button" data-nombre="Espejo Susurro (Redondo 45 cm)" data-precio="$59.990 CLP">Quiero este espejo</button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CÓMO COMPRAR: 3 pasos simples ========== -->
+    <section id="como-comprar" class="seccion-como-comprar">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Cómo comprar</h2>
+        <p class="descripcion-seccion">Compra directa, sin carrito ni formularios.</p>
+
+        <ol class="pasos-compra">
+          <li class="paso-compra">
+            <span class="numero-paso">1</span>
+            <h3 class="titulo-paso">Elige tu espejo</h3>
+            <p>Revisa las fotos, medidas y precios de este catálogo.</p>
+          </li>
+          <li class="paso-compra">
+            <span class="numero-paso">2</span>
+            <h3 class="titulo-paso">Toca WhatsApp</h3>
+            <p>Al presionar "Quiero este espejo" se abre WhatsApp con el mensaje listo.</p>
+          </li>
+          <li class="paso-compra">
+            <span class="numero-paso">3</span>
+            <h3 class="titulo-paso">Coordinamos el envío</h3>
+            <p>Confirmamos disponibilidad, pago y entrega según tu comuna.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO: WhatsApp y mensaje ========== -->
+    <section id="contacto" class="seccion-contacto">
+      <div class="contenedor contenedor-contacto">
+        <h2 class="titulo-seccion">Contacto</h2>
+        <p class="descripcion-seccion">
+          ¿Dudas por medidas o envío? Escríbenos y te atendemos por WhatsApp.
+        </p>
+
+        <div class="tarjeta-contacto">
+          <p class="dato-contacto"><strong>WhatsApp:</strong> <a href="https://wa.me/56957071102?text=Hola%2C%20quiero%20consultar%20por%20un%20espejo." target="_blank" rel="noopener">+56 9 5707 1102</a></p>
+          <p class="dato-contacto"><strong>Moneda:</strong> Pesos chilenos (CLP)</p>
+          <p class="dato-contacto"><strong>Horario:</strong> Lunes a Sábado, horario diurno</p>
+          <a class="boton-whatsapp boton-contacto" href="https://wa.me/56957071102?text=Hola%2C%20tengo%20una%20consulta%20por%20un%20espejo." target="_blank" rel="noopener">Escribenos por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== PIE DE PÁGINA ========== -->
+  <footer class="pie-sitio">
+    <div class="contenedor contenedor-pie">
+      <p class="logo-tienda">ALE — Espejos Encantados</p>
+      <p>Catálogo informativo. Cada espejo está sujeto a disponibilidad por WhatsApp.</p>
+      <p>© <span id="anio-actual"></span> ALE — Espejos Encantados</p>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
+</body>
+</html>

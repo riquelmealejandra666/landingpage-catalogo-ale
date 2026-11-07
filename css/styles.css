@@ -1,0 +1,460 @@
+/* =========================================================
+   ALE — Espejos Encantados | Estilos principales
+   Paleta: oscura / gótica (horror) + responsive
+   ========================================================= */
+
+/* ---------- Variables de color y tipografía ---------- */
+:root {
+  --color-medianoche: #0E0A13;
+  --color-grafito: #1B1626;
+  --color-grafito-claro: #241C33;
+  --color-rojo-navaja: #B3122E;
+  --color-rojo-hover: #9E0F28;
+  --color-verde-pantano: #2B5E3F;
+  --color-hueso: #E8E0D0;
+  --color-gris-niebla: #9A94A6;
+  --color-borde: #322A45;
+
+  --fuente-titulos: "Cinzel", serif;
+  --fuente-cuerpo: "Manrope", sans-serif;
+
+  --radio-tarjeta: 14px;
+  --ancho-maximo: 1200px;
+  --alto-nav: 68px;
+}
+
+/* ---------- Base / reseteo ---------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--fuente-cuerpo);
+  background: var(--color-medianoche);
+  color: var(--color-hueso);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+/* Foco visible para navegación por teclado */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--color-rojo-navaja);
+  outline-offset: 3px;
+}
+
+/* Contenedor central de la página */
+.contenedor {
+  width: min(100% - 40px, var(--ancho-maximo));
+  margin-inline: auto;
+}
+
+/* ---------- Cabecera / navegación ---------- */
+.cabecera-sitio {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-medianoche);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+/* Barra de navegación */
+.navegacion-principal {
+  min-height: var(--alto-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo de la tienda */
+.logo-tienda {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.logo-respaldo {
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-gris-niebla);
+}
+
+/* Botón hamburguesa (móvil) */
+.boton-hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.linea-hamburguesa {
+  width: 22px;
+  height: 2px;
+  background: var(--color-hueso);
+}
+
+/* Lista de enlaces */
+.lista-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.enlace-navegacion {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.enlace-navegacion:hover {
+  color: var(--color-rojo-navaja);
+}
+
+/* ---------- Botones generales ---------- */
+.boton-principal,
+.boton-secundario,
+.boton-whatsapp {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.boton-principal {
+  background: var(--color-rojo-navaja);
+  color: #fff;
+}
+
+.boton-principal:hover { background: var(--color-rojo-hover); }
+
+.boton-secundario {
+  background: transparent;
+  color: var(--color-hueso);
+  border-color: var(--color-borde);
+}
+
+.boton-secundario:hover { border-color: var(--color-hueso); }
+
+/* Botón WhatsApp (verde sobrio, no chillón) */
+.boton-whatsapp {
+  background: var(--color-verde-pantano);
+  color: #fff;
+  border: 1px solid #3B7353;
+  text-align: center;
+}
+
+.boton-whatsapp:hover { background: #244F35; }
+
+.boton-nav { padding: 9px 18px; }
+
+.boton-contacto { margin-top: 10px; }
+
+/* ---------- Hero / portada ---------- */
+.seccion-hero {
+  padding: 64px 0 56px;
+  background:
+    radial-gradient(700px 400px at 70% 30%, rgba(179, 18, 46, 0.14), transparent 60%),
+    var(--color-medianoche);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.contenedor-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.titulo-hero {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+
+.subtitulo-hero {
+  font-size: 1.08rem;
+  color: var(--color-gris-niebla);
+  max-width: 58ch;
+  margin: 0 0 24px;
+}
+
+.acciones-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.nota-hero {
+  font-size: 0.9rem;
+  color: var(--color-gris-niebla);
+  margin: 0;
+}
+
+/* Marco del espejo principal */
+.marco-espejo-hero {
+  background: var(--color-grafito);
+  border: 1px solid var(--color-borde);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.espejo-hero-imagen {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 16px;
+  background: var(--color-grafito-claro);
+}
+
+.pie-espejo-hero {
+  text-align: center;
+  color: var(--color-gris-niebla);
+  font-size: 0.9rem;
+  margin: 12px 0 0;
+}
+
+/* ---------- Secciones de contenido ---------- */
+.seccion-catalogo,
+.seccion-como-comprar,
+.seccion-contacto {
+  padding: 64px 0;
+}
+
+.seccion-como-comprar {
+  background: var(--color-grafito);
+  border-block: 1px solid var(--color-borde);
+}
+
+.titulo-seccion {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  margin: 0 0 10px;
+}
+
+.descripcion-seccion {
+  color: var(--color-gris-niebla);
+  max-width: 68ch;
+  margin: 0 0 32px;
+}
+
+/* ---------- Catálogo: rejilla responsive ---------- */
+.rejilla-catalogo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* Tarjeta individual de un espejo */
+.tarjeta-espejo {
+  background: var(--color-grafito);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contenedor-imagen {
+  position: relative;
+  margin: 0;
+}
+
+.imagen-espejo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+  background: var(--color-grafito-claro);
+}
+
+/* Etiqueta pequeña sobre la foto */
+.etiqueta-espejo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--color-rojo-navaja);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.nombre-espejo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.medida-espejo {
+  color: var(--color-gris-niebla);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.descripcion-espejo {
+  color: var(--color-gris-niebla);
+  font-size: 0.95rem;
+  margin: 0;
+  flex: 1;
+}
+
+.precio-espejo {
+  font-family: var(--fuente-titulos);
+  font-weight: 900;
+  font-size: 1.45rem;
+  color: var(--color-rojo-navaja);
+  margin: 0;
+}
+
+.moneda {
+  font-size: 0.85rem;
+  color: var(--color-gris-niebla);
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+}
+
+/* ---------- Cómo comprar: pasos ---------- */
+.pasos-compra {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  counter-reset: paso;
+}
+
+.paso-compra {
+  background: var(--color-medianoche);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+  padding: 22px;
+}
+
+.numero-paso {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-rojo-navaja);
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.titulo-paso { margin: 0 0 8px; font-size: 1.05rem; }
+
+.paso-compra p {
+  color: var(--color-gris-niebla);
+  margin: 0;
+}
+
+/* ---------- Contacto ---------- */
+.contenedor-contacto { max-width: 760px; }
+
+.tarjeta-contacto {
+  background: var(--color-grafito);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+  padding: 26px;
+}
+
+.dato-contacto { margin: 0 0 12px; }
+
+.dato-contacto a {
+  color: var(--color-hueso);
+  font-weight: 700;
+}
+
+/* ---------- Pie de página ---------- */
+.pie-sitio {
+  border-top: 1px solid var(--color-borde);
+  padding: 28px 0;
+  text-align: center;
+  color: var(--color-gris-niebla);
+}
+
+.pie-sitio p { margin: 6px 0; }
+
+.pie-sitio .logo-tienda { color: var(--color-hueso); }
+
+/* ---------- Responsive: tablet ---------- */
+@media (max-width: 1024px) {
+  .rejilla-catalogo { grid-template-columns: repeat(3, 1fr); }
+  .contenedor-hero { gap: 32px; }
+}
+
+/* ---------- Responsive: móvil y escritorio compacto ---------- */
+@media (max-width: 768px) {
+  /* Muestra el botón hamburguesa */
+  .boton-hamburguesa { display: flex; }
+
+  /* Menú oculto por defecto, se abre con JS */
+  .lista-menu {
+    display: none;
+    position: absolute;
+    top: var(--alto-nav);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 20px 18px;
+    background: var(--color-medianoche);
+    border-bottom: 1px solid var(--color-borde);
+  }
+
+  /* Clase que agrega JS para abrir el menú */
+  .lista-menu.abierta {
+    display: flex;
+  }
+
+  .lista-menu li { padding: 8px 0; }
+
+  .enlace-navegacion { display: block; padding: 8px 0; }
+
+  /* Hero en una columna */
+  .contenedor-hero { grid-template-columns: 1fr; }
+
+  /* Catálogo en 2 columnas en móvil */
+  .rejilla-catalogo { grid-template-columns: repeat(2, 1fr); }
+
+  /* Pasos en una columna */
+  .pasos-compra { grid-template-columns: 1fr; }
+}
+
+/* ---------- Responsive: pantallas muy pequeñas ---------- */
+@media (max-width: 420px) {
+  .rejilla-catalogo { grid-template-columns: 1fr; }
+  .seccion-hero { padding-top: 44px; }
+  .logo-respaldo { display: none; }
+}
+
+/* Respeto a personas que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
