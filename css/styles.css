@@ -162,6 +162,32 @@ a:focus-visible, button:focus-visible {
 
 .boton-whatsapp:hover { background: #244F35; }
 
+/* Botón Instagram: gradiente acorde al logo */
+.boton-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+  box-shadow: 0 10px 24px rgba(221, 42, 123, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.boton-instagram:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(221, 42, 123, 0.3);
+  filter: saturate(1.06);
+}
+
 .boton-nav { padding: 9px 18px; }
 
 .boton-contacto { margin-top: 10px; }
@@ -457,4 +483,6 @@ a:focus-visible, button:focus-visible {
 /* Respeto a personas que prefieren menos movimiento */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .boton-instagram { transition: none; }
+  .boton-instagram:hover { transform: none; }
 }
