@@ -51,3 +51,31 @@ const anioActual = document.getElementById("anio-actual");
 if (anioActual) {
   anioActual.textContent = new Date().getFullYear();
 }
+
+/* ---------- 4) Ampliación de fotos del catálogo ---------- */
+const visorImagen = document.getElementById("visor-imagen");
+const imagenAmpliada = visorImagen.querySelector(".imagen-ampliada");
+const pieImagenAmpliada = visorImagen.querySelector(".pie-imagen-ampliada");
+const botonCerrarVisor = visorImagen.querySelector(".boton-cerrar-visor");
+
+document.querySelectorAll(".boton-ampliar").forEach(function (boton) {
+  boton.addEventListener("click", function () {
+    const imagen = boton.closest(".contenedor-imagen").querySelector(".imagen-espejo");
+    const nombreProducto = boton.closest(".tarjeta-espejo").querySelector(".nombre-espejo").textContent;
+
+    imagenAmpliada.src = imagen.src;
+    imagenAmpliada.alt = imagen.alt;
+    pieImagenAmpliada.textContent = nombreProducto;
+    visorImagen.showModal();
+  });
+});
+
+botonCerrarVisor.addEventListener("click", function () {
+  visorImagen.close();
+});
+
+visorImagen.addEventListener("click", function (event) {
+  if (event.target === visorImagen) {
+    visorImagen.close();
+  }
+});
